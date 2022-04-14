@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.构造函数，如 new Star(),抽象了对象的公共部分，封装到了函数里面，它泛指某一大类(class)
+        function Star(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(song) {
+                console.log(song);
+            }
+        }
+
+        // 2.创建对象，如new Stars(),特指某一个，通过new关键字创建对象的过程我们也称为对象实例化
+        var ldh = new Star('刘德华', 18, '男'); //调用函数返回的是一个对象
+        console.log(ldh);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

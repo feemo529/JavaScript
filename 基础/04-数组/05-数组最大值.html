@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //数组最大值
+        //1.声明一个保存最大元素的变量 max
+        //2.默认最大值可以取数组中的第一个元素
+        //3.遍历这个数组，把里面每个数组元素和 max 相比较。
+        //4.如果这个数组元素大于max 就把这个数组元素存到 max 里面，否则继续下轮比较。
+        var arr = [8, 2, 45, 66, 77, 88, 99];
+        var max = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (parseFloat(arr[i]) > max) {
+                max = arr[i];
+            }
+        }
+        console.log('最大值是：' + max);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

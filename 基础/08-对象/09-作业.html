@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.创建一个电脑对象，该对象有颜色、重量、品牌、型号，可以看电影、听音乐、打游戏和敲代码
+        // var obj = new Object();
+        // obj.color = 'red';
+        // obj.weight = '10kg';
+        // obj.band = '神舟';
+        // obj.number = 123345;
+        // obj.fn = function(flim, music, game, code) {
+        //     console.log(flim, music, game, code);
+        // }
+        // for (var k in obj) {
+        //     console.log(obj[k]);
+        // }
+        // obj.fn('看电影', '听音乐', '打游戏', '敲代码')
+
+        // 2.创建一个按钮对象,该对象中需要包含宽、高、背景颜色和点击行为
+        // function Button(wide, height, backgroundcolor) {
+        //     this.W = wide;
+        //     this.H = height;
+        //     this.bgc = backgroundcolor;
+        //     this.click = function(dj) {
+        //         return dj;
+        //     }
+        // }
+        // var btn = new Button('20px', '20px', 'red');
+        // console.log(btn.W, btn.H, btn.bgc, btn.click('click!'));
+
+        // 3.创建一个车的对象，该对象有重量、颜色、牌子，可以载人、拉货和耕田
+        // function Vehicle(weight, color, band) {
+        //     this.w = weight;
+        //     this.c = color;
+        //     this.b = band;
+        //     this.fn = function(gn) {
+        //         return gn;
+        //     }
+        // }
+        // var car = new Vehicle('75kg', 'blue', '大众');
+        // console.log(car.w, car.c, car.b, car.fn('载人、拉货、耕田'));
+
+        // 4.写一个函数，实现翻转任意数组
+        // function reverse(arr) {
+        //     var newArr = [];
+        //     for (var i = arr.length - 1; i >= 0; i--) {
+        //         newArr[newArr.length] = arr[i];
+        //     }
+        //     return newArr;
+        // }
+        // var arr1 = reverse([1, 2, 3, 4, 5]);
+        // console.log(arr1);
+
+        // 5.写一个函数，实现对数字数组的排序
+        // function sort(arr) {
+        //     for (var i = 0; i <= arr.length - 1; i++) {
+        //         for (var j = 0; j <= arr.length - i - 1; j++) {
+        //             if (arr[j] > arr[j + 1]) {
+        //                 var temp = arr[j];
+        //                 arr[j] = arr[j + 1];
+        //                 arr[j + 1] = temp;
+        //             }
+        //         }
+        //     }
+        //     return arr;
+        // }
+        // var arr1 = sort([1, 8, 4, 56, 26, 18])
+        // console.log(arr1);
+
+        // 简易计算器
+
+
+        var chose = prompt('欢迎使用简易计算器：' + '\n' + '1.加法运算' + '\n' + '2.减法运算' + '\n' + '3.乘法运算' + '\n' + '4.除法运算' + '\n' + '5.退出' + '\n' + '请输入您的选项');
+        if (chose == 1) {
+            fn1();
+        } else if (chose == 2) {
+            fn2();
+        } else if (chose == 3) {
+            fn3();
+        } else if (chose == 4) {
+            fn4();
+        } else if (chose == 5) {
+            alert('退出成功')
+            i += 1;
+        } else {
+            alert('请输入正确的数字！')
+        }
+
+        function fn1() {
+            var num1 = prompt('请输入第一个值：');
+            var num2 = prompt('请输入第二个值：');
+            alert('结果为' + (parseFloat(num1) + parseFloat(num2)));
+        }
+
+        function fn2() {
+            var num1 = prompt('请输入第一个值：');
+            var num2 = prompt('请输入第二个值：');
+            alert('结果为' + (parseFloat(num1) - parseFloat(num2)));
+        }
+
+        function fn3() {
+            var num1 = prompt('请输入第一个值：');
+            var num2 = prompt('请输入第二个值：');
+            alert('结果为' + (parseFloat(num1) * parseFloat(num2)));
+        }
+
+        function fn4() {
+            var num1 = prompt('请输入第一个值：');
+            var num2 = prompt('请输入第二个值：');
+            alert('结果为' + (parseFloat(num1) / parseFloat(num2)));
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.求1~100之间所有数的总和与平均值
+        /*  var j = 0;
+         for (var i = 1; i <= 100; i++) {
+             j = j + i;
+         }
+         console.log(j);
+         console.log(parseFloat(j % 100));
+
+         // 2.求1~100之间所有偶数的和
+         var i = 0;
+         for (var j = 1; j <= 100; j++) {
+             if (j % 2 == 0) {
+                 i += j;
+             } else {
+                 continue;
+             }
+         }
+         console.log(i);
+
+         // 3.求100内7的倍数的总和
+         var j = 0;
+         for (var i = 1; i <= 100; i++) {
+             if (i % 7 == 0) {
+                 j = j + i;
+             } else {
+                 continue;
+             }
+         }
+         console.log(j);
+
+         // 4.使用for循环打印矩形，要求每次只能输出一个星
+         var str = '';
+         for (var i = 1; i <= 4; i++) {
+             for (var j = 1; j <= 5; j++) {
+                 str = str + '★';
+             }
+             str = str + '\n';
+         }
+         console.log(str);
+
+         // 5.使用for循环打印三角形
+         var str = '';
+         for (var i = 1; i <= 5; i++) {
+             for (var j = 1; j <= i; j++) {
+                 str = str + '★';
+             }
+             str = str + '\n';
+         }
+         console.log(str);
+
+         // 6.使用for循环打印99乘法表
+         var str = '';
+         for (var i = 1; i <= 9; i++) {
+             for (var j = 1; j <= i; j++) {
+                 str = str + j + '×' + i + '\t';
+             }
+             str = str + '\n';
+         }
+         console.log(str); */
+
+        //7. 接收用户输入的用户名和密码，若用户名为"admin",密码为“123456”，则提示用户登录成功！否则，让用户一直输入
+
+        // do {
+        //     var i = prompt('Enter you name:');
+        //     var j = prompt('Enter you password:');
+        // } while (i !== 'admin' && j !== '123456')
+        // alert('login success!');
+
+        // 8.求整数1~100的累加值，但要求跳过所有个位为3的数【用continue实现】
+        // var j = 0;
+        // for (var i = 1; i <= 100; i++) {
+        //     if (i % 10 == 3) {
+        //         continue;
+        //     }
+        //     j = j + i;
+        // }
+        // console.log(j);
+
+        // 简易ATM
+        var deposit = 100;
+        var i = 1;
+        while (i == 1) {
+            var chose = prompt('Enter you choice:' + '\n' + '1.Top up' + '\n' + '2.Withdraw' + '\n' + '3.According the balance' + '\n' + '4.Log out');
+            if (chose == 1) {
+                var cash = prompt('Please enter your deposit:');
+                deposit += parseFloat(cash);
+                alert('Your current deposits is:' + '\t' + parseFloat(deposit));
+            } else if (chose == 2) {
+                var cash = prompt('Please enter the amount of money you want to withdraw: ');
+                deposit -= parseFloat(cash);
+                alert('Your current deposit is:' + '\t' + parseFloat(deposit));
+            } else if (chose == 3) {
+                alert('Your current deposit is:' + '\t' + parseFloat(deposit));
+            } else if (chose == 4) {
+                alert('Log out ');
+                i += 1;
+            } else {
+                alert('please enter a right number!')
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

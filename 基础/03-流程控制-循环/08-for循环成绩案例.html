@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = prompt('请输入总的班级人数：');
+        var sum = 0;
+        for (var i = 1; i <= num; i++) {
+            var score = prompt('输入' + i + '学生的成绩：');
+            sum += parseFloat(score);
+        }
+        alert('班级的总的成绩是：' + sum);
+        alert('班级的平均分是：' + sum / num);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

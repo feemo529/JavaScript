@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">emoji1</button>
+    <button id="btn2">emoji2</button> <br>
+    <img src="images/timg.jpg" alt="" title="emoji1">
+
+    <script>
+        // 修改元素属性 src
+        // 1. 获取元素
+        var btn1 = document.getElementById('btn1');
+        var btn2 = document.getElementById('btn2');
+        var img = document.querySelector('img')
+
+        // 2.注册事件 处理程序
+        btn1.onclick = function() {
+            img.src = 'images/timg.jpg'
+            img.title = 'emoji1'
+        }
+        btn2.onclick = function() {
+            img.src = 'images/timg1.jpg';
+            img.title = 'emoji2'
+        }
+    </script>
+</body>
+
+</html>

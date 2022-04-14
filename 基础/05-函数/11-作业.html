@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //用户输入任意两个数字的任意算术运算(简单的计算器小功能)，并能弹出运算后的结果
+        // function getSum() {
+        //     var num1 = prompt('Enter you num1:');
+        //     var num2 = prompt('Enter you num2:');
+        //     return [parseFloat(num1) + parseFloat(num2)];
+        // }
+        // alert('The sum is: ' + '\t' + getSum());
+
+        //用户输入任意两个数字的最大值，并能弹出运算后的结果
+        // function getSum() {
+        //     var num1 = prompt('Enter you num1:');
+        //     var num2 = prompt('Enter you num2:');
+        //     if (parseFloat(num1) > parseFloat(num2)) {
+        //         max = num1;
+        //     } else {
+        //         max = num2;
+        //     }
+        //     return max;
+        // }
+        // alert('The max num is:' + '\t' + getSum());
+
+        //用户输入任意三个不同数字的最大值，并能弹出运算后的结果
+        // function getSum() {
+        //     var num1 = prompt('Enter you num1:');
+        //     var num2 = prompt('Enter you num2:');
+        //     var num3 = prompt('Enter you num3:');
+        //     if (parseFloat(num1) > parseFloat(num2) && parseFloat(num1) > parseFloat(num3)) {
+        //         max = num1;
+        //     } else if (parseFloat(num2) > parseFloat(num1) && parseFloat(num2) > parseFloat(num3)) {
+        //         max = num2;
+        //     } else {
+        //         max = num3;
+        //     }
+        //     return max;
+        // }
+        // alert('The max num is:' + '\t' + getSum());
+
+        //用户输入一个数判断是否是素数，并弹出返回值(又叫质数，只能被1和自身整除的数)
+        function isPrime(num) {
+            var num = prompt('请输入一个数字：');
+            // 不是数字或者数字小于2
+            if (typeof num !== "number" || !Number.isInteger(num)) {　　　　　　
+                // Number.isInterget判断是否为整数
+                return false;
+            }
+
+            //2是质数
+            if (num == 2) {
+                return num;
+            } else if (num % 2 == 0) { //排除偶数
+                return false;
+            }
+            //依次判断是否能被奇数整除，最大循环为数值的开方
+            var squareRoot = Math.sqrt(num);
+            //因为2已经验证过，所以从3开始；且已经排除偶数，所以每次加2
+            for (var i = 3; i <= squareRoot; i += 2) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

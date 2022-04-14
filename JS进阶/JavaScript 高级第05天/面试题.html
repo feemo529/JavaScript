@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = {
+        aa: 1,
+        bb: 2,
+        cc: 3,
+        dd: {
+          ee: 5
+        },
+        ff: {
+          gg: 6
+        }
+      }
+      let b = a
+      b.bb = 22
+      console.log(a)
+      let d = JSON.parse(JSON.stringify(a))
+      let c = { ...a }
+      c.cc = 33
+      c.dd.ee = 55
+      d.ff.gg = 66
+      console.log(b)
+      console.log(c)
+      console.log(d)
+    </script>
+  </body>
+</html>
